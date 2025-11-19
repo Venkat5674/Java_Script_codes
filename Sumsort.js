@@ -18,7 +18,7 @@ function SumSort(arr, n) {
         }
     });
 
-    console.log(arr.join(" "));
+    console.log(arr.join(""));
 }
 
 const readline = require("readline");
