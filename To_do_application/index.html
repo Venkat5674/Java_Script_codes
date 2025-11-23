@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="app-title">Task Manager</h1>
+
+    <!-- REGISTRATION FORM SECTION -->
+    <section id="register-section">
+        <h2>Register Form</h2>
+
+        <form id="registerForm" name="registerForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" oninput="removeError(event)">
+            <small class="error-text" id="nameError"></small>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" oninput="removeError(event)">
+            <small class="error-text" id="emailError"></small>
+
+            <label for="phno">Phone Number</label>
+            <input type="text" id="phno" name="phno" oninput="removeError(event)">
+            <small class="error-text" id="phnoError"></small>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" oninput="removeError(event)">
+            <small class="error-text" id="passwordError"></small>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- TODO SECTION (hidden initially) -->
+    <section id="todo-section" class="hidden">
+        <h2>Step 2: Your Todo List</h2>
+
+        <form id="todoForm" class="todo-form">
+            <label for="taskInput">Add a Task</label>
+            <input
+                type="text"
+                id="taskInput"
+                name="task"
+                placeholder="Enter a task"
+            >
+
+            <label>Select Time</label>
+            <div class="time-row">
+                <select id="taskHour">
+                    <option value="">HH</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <select id="taskMinute">
+                    <option value="">MM</option>
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                </select>
+
+                <select id="taskPeriod">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="stats">
+            <p>Total Tasks: <span id="taskCount">0</span></p>
+            <p>Completed Tasks: <span id="completedCount">0</span></p>
+        </div>
+
+        <ul id="taskList">
+            <!-- Tasks will appear here -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
