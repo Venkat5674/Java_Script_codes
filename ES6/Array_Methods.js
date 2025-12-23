@@ -5,7 +5,7 @@ let arr = ["balayya", "ka paul", "uppal balu", "macha"];
 let emps = [
     { id: 101, name: "balayya",    sal: 30000 },
     { id: 201, name: "uppal balu", sal: 40000 },
-    { id: 301, name: "macha",      sal: 50000 },
+    { id: 301, name: "Aggi Petta macha",      sal: 50000 },
     { id: 401, name: "dhurga",     sal: 60000 },
     { id: 501, name: "ka paul",    sal: 70000 },
     { id: 601, name: "chiru",      sal: 90000 }
